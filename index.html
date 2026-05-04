@@ -113,7 +113,7 @@
         
         .badge-custom { background: var(--badge); padding: 6px 18px; border-radius: 40px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 500; color: var(--badge-text); margin-bottom: 1rem; }
         
-        /* ========= CARD MODERN - BORDER GRADIENT SOFT SELALU TERLIHAT ========= */
+        /* ========= CARD MODERN ========= */
         .card {
             background: var(--card-bg);
             border-radius: 1.5rem;
@@ -123,8 +123,6 @@
             position: relative;
             backdrop-filter: blur(2px);
         }
-        
-        /* Border gradient soft SELALU terlihat di pinggiran */
         .card::before {
             content: '';
             position: absolute;
@@ -143,13 +141,10 @@
             animation: borderSoftFlow 6s ease infinite;
             opacity: 0.85;
         }
-        
-        /* Saat HOVER - gradient halus di background (tidak terlalu terang) */
         .card:hover {
             transform: translateY(-6px);
             box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
         }
-        
         .card:hover::after {
             content: '';
             position: absolute;
@@ -175,7 +170,7 @@
             100% { background-position: 0% 50%; opacity: 0.7; }
         }
         
-        /* EDUCATION ITEM - style sama dengan card */
+        /* EDUCATION ITEM */
         .education-item {
             background: var(--card-bg);
             border-radius: 1.5rem;
@@ -202,10 +197,7 @@
             pointer-events: none;
             animation: borderSoftFlow 6s ease infinite;
         }
-        .education-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
+        .education-item:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
         .education-item i { font-size: 1.6rem; margin-right: 15px; color: #c4456e; width: 40px; vertical-align: middle; }
         
         /* SKILL ITEM */
@@ -269,10 +261,10 @@
         .media-panel:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
         .media-header { background: linear-gradient(145deg,#ffc0dc,#ff9bc0); padding: 0.8rem; text-align: center; color: white; }
         .media-content { padding: 1.2rem; }
-        .spotify-embed { border-radius: 12px; width: 100%; margin-bottom: 0.8rem; }
-        .artist-list { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+        .spotify-embed { border-radius: 12px; width: 100%; margin-bottom: 0.8rem; min-height: 200px; }
+        .artist-list { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
         .artist-link { background: rgba(255,105,180,0.2); padding: 6px 14px; border-radius: 30px; text-decoration: none; color: var(--text); transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; }
-        .artist-link:hover { background: #f472b6; color: white; }
+        .artist-link:hover { background: #f472b6; color: white; transform: translateY(-2px); }
         
         .movie-list { list-style: none; padding: 0; }
         .movie-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,105,180,0.3); display: flex; align-items: center; gap: 12px; }
@@ -322,7 +314,7 @@
         .skills-section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.55); z-index: 0; }
         .skills-section .container { position: relative; z-index: 2; }
         
-        .tech-badge-white { background: white; color: #c4456e; padding: 4px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 500; display: inline-flex; align-items: center; gap: 5px; margin-right: 6px; margin-bottom: 6px; }
+        .tech-badge-white { background: white; color: #c4456e; padding: 4px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 500; display: inline-flex; align-items: center; gap: 5px; margin-right: 6px; margin-bottom: 6px; transition: 0.2s; }
         .tech-badge-white:hover { background: #f472b6; color: white; transform: scale(1.05); }
         
         .social-link { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #ffe2ec; border-radius: 50%; font-size: 1.6rem; color: #c4456e; text-decoration: none; transition: 0.2s; }
@@ -444,10 +436,10 @@
                 <div class="text-center fade-in">
                     <h2 class="edwardian-title" id="educationTitle">Perjalanan Pendidikan</h2>
                     <div style="max-width: 600px; margin: 0 auto;">
-                        <div class="education-item"><i class="fas fa-school"></i> <strong id="edu1">MIN 15 Pidie (2012-2018)</strong></div>
-                        <div class="education-item"><i class="fas fa-chalkboard-user"></i> <strong id="edu2">SMPN 2 Padang Tiji (2018-2021)</strong></div>
-                        <div class="education-item"><i class="fas fa-graduation-cap"></i> <strong id="edu3">SMANSA Padang Tiji (2021-2024)</strong></div>
-                        <div class="education-item"><i class="fas fa-university"></i> <strong id="edu4">Universitas Jabal Ghafur (2024-sekarang)</strong></div>
+                        <div class="education-item"><i class="fas fa-school"></i> <strong id="edu1">MIN 15 Pidie (-2017)</strong></div>
+                        <div class="education-item"><i class="fas fa-chalkboard-user"></i> <strong id="edu2">SMPN 2 Padang Tiji (2018-2020)</strong></div>
+                        <div class="education-item"><i class="fas fa-graduation-cap"></i> <strong id="edu3">SMANSA Padang Tiji (2021-2023)</strong></div>
+                        <div class="education-item"><i class="fas fa-university"></i> <strong id="edu4">Universitas Jabal Ghafur (2025-sekarang)</strong></div>
                     </div>
                 </div>
             </div>
@@ -473,6 +465,7 @@
 
         <div class="glow-divider"></div>
 
+        <!-- FAVORITKU DENGAN PLAYLIST SPOTIFY -->
         <section class="py-5">
             <div class="container">
                 <div class="text-center fade-in">
@@ -484,11 +477,14 @@
                             <div class="media-panel">
                                 <div class="media-header"><i class="fab fa-spotify fa-2x"></i><h4 style="font-size: 1rem;" id="musicHeader">🎧 My Favorite Music</h4></div>
                                 <div class="media-content">
-                                    <iframe class="spotify-embed" src="https://open.spotify.com/embed/album/58eNU0JJvtAWAg9KUZ9Ghf" width="100%" height="180" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                    <!-- SPOTIFY PLAYLIST - LAGU TAYLOR SWIFT (Anti-Hero) -->
+                                    <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/1rIl4LYrMRGmTx7dnktVq7?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                                     <div class="artist-list">
-                                        <a href="#" class="artist-link"><i class="fab fa-spotify"></i> Taylor Swift</a>
-                                        <a href="#" class="artist-link"><i class="fab fa-spotify"></i> Billie Eilish</a>
-                                        <a href="#" class="artist-link"><i class="fab fa-spotify"></i> Arijit Singh</a>
+                                        <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02" target="_blank" class="artist-link"><i class="fab fa-spotify"></i> Taylor Swift</a>
+                                        <a href="https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH" target="_blank" class="artist-link"><i class="fab fa-spotify"></i> Billie Eilish</a>
+                                        <a href="https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw" target="_blank" class="artist-link"><i class="fab fa-spotify"></i> Arijit Singh</a>
+                                        <a href="https://open.spotify.com/artist/6KxNAsg1PZzCjA2bJnYpSp" target="_blank" class="artist-link"><i class="fab fa-spotify"></i> Nancy Ajram</a>
+                                        <a href="https://open.spotify.com/artist/5k4W1B6jqZb0bBUNPj2FTP" target="_blank" class="artist-link"><i class="fab fa-spotify"></i> Sherine</a>
                                     </div>
                                 </div>
                             </div>
@@ -694,10 +690,10 @@
             aboutBadge: "Tentang Saya",
             aboutText: "Saya adalah mahasiswa di bidang informatika yang sedang dalam proses belajar dan berkembang di dunia teknologi. Memiliki minat dalam pengembangan sistem dan terus berusaha meningkatkan kemampuan melalui pembelajaran dan pengalaman. Saya percaya bahwa proses adalah bagian penting untuk menjadi lebih baik setiap harinya.",
             educationTitle: "Perjalanan Pendidikan",
-            edu1: "MIN 15 Pidie (2012-2017)",
-            edu2: "SMPN 2 Padang Tiji (2018-2020)",
-            edu3: "SMANSA Padang Tiji (2021-2023)",
-            edu4: "Universitas Jabal Ghafur (2025-sekarang)",
+            edu1: "MIN 15 Pidie (2012-2018)",
+            edu2: "SMPN 2 Padang Tiji (2018-2021)",
+            edu3: "SMANSA Padang Tiji (2021-2024)",
+            edu4: "Universitas Jabal Ghafur (2024-sekarang)",
             skillsBadge: "Kemampuan",
             skillsTitle: "Keahlian Saya",
             skill1: "Editing Foto & Video",
